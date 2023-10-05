@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Clone</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <nav>
+        <img src="./icon.png" alt="icon">
+        <div class="button-container">
+            <button>File</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Insert</button>
+            <button>Format</button>
+            <button>Data</button>
+            <button>Tools</button>
+            <button>Extensions</button>
+            <button>Help</button>
+        </div>
+    </nav>
+    <div class="tool-container">
+
+
+        <div class="left-container">
+            <label style="margin-top:5px ;" for="font-size"> Font-Size:</label>
+            <select id="font-size">
+                <option value="14px">14</option>
+                <option value="16px">16</option>
+                <option value="18px">18</option>
+                <option value="20px">20</option>
+                <option value="22px">22</option>
+            </select>
+
+            <label style="margin-top:5px ;" for="font-size"> Fonts:</label>
+            <select id="font-family">
+                <option value="serif">Serif</option>
+                <option value="sans-serif">sans-serif</option>
+                <option value="cursive">cursive</option>
+                <option value="monospace">monospace</option>
+            </select>
+    
+            <button id="bold-btn">B</button>
+            <button id="Italic-btn">I</button>
+            <button id="underline-btn">U</button>
+    
+            <button id="cut" class="material-symbols-outlined">cut</button>
+            <button id="copy"><span class="material-symbols-outlined">content_copy</span></button>
+            <button id="paste"><span class="material-symbols-rounded">content_paste</span></button>
+            
+        </div>
+        <div class="right-container">
+            <label style="margin-top:5px ;" for="text-color">Text Color</label>
+        <input type="color" id="text-color" />
+
+        <label style="margin-top:5px ;" for="bg-color">Bg Color</label>
+        <input type="color" id="bg-color" />
+    
+
+        <button id="left-align" class="material-symbols-rounded">format_align_left</button>
+        <button id="center-align" class="material-symbols-rounded">format_align_center</button>
+        <button id="right-align" class="material-symbols-rounded">format_align_right</button>
+        
+        <button onclick="downloadJson()"  class="material-symbols-outlined">download</button>
+
+        <input type="file" id="jsonFile" accept=".json">
+        
+        </div>
+    </div>
+    <div class="address-container">
+        <p id="cell-add">Cell Address : </p>
+        <h2 id="current-cell">No Cell selected</h2>
+    </div>
+    <div>
+    <h2 id="sheet-num">Sheet No 1</h2>
+    <button id="add-sheet-btn">Add Sheet</button>
+    <button id="sheet-1">Shhet 1</button>
+    <button id="sheet-2">Shhet 2</button>
+    <button id="sheet-3">Shhet 3</button>
+    
+    </div>
+
+    <br>
+    <br>
+    <table id="my-table">
+        <thead>
+            <tr id="table-heading-row">
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+    <script src="./script.js"></script>
+</body>
+
+</html>
